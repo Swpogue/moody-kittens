@@ -16,7 +16,7 @@
     <img src="moody-logo.png" height="60" alt="Moody Kittens">
     <form class="" onsubmit="addKitten(event)">
       <div class="d-flex">
-        <input placeholder="Name" type="text" name="name" />
+        <input placeholder="Name" type="text" name="kittenName" required/>
         <button class="btn-special" type="submit">
           /ᐠ｡ꞈ｡ᐟ\
         </button>
@@ -28,8 +28,8 @@
       <div class="card p-2 text-center w-50">
         <img src="moody-logo.png" height="250" alt="Moody Kittens">
         <div class="mt-2">
-          <b class="text-center">Hello Student</b>
-          <p>This is your starter template only feel free to modify the look as you tackle the challenges that we have laid out.</p>
+          <b class="text-center">Hello Owner</b>
+          <p>Can you keep you kitten happy? Let's find out!</p>
           <small>Good Luck and Have Fun!</small>
           <br>
           <button onclick="getStarted()">Get Started</button>
@@ -38,7 +38,10 @@
     </div>
     <div class="p-2">
       <div id="kittens" class="d-flex align-items-center flex-wrap">
+        <img src="" alt="kitten">
+        <img src="" alt="cat">
       </div>
+     
   </main>
   <footer class="card bg-dark text-light p-2 d-flex align-items-center justify-content-center">
     <small>Created with <span style="color: var(--primary)">&hearts;</span> by CodeWorks</small>

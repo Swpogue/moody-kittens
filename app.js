@@ -1,4 +1,9 @@
+let currentKitten = {}
+
+
+
 let kittens = []
+loadKittens()
 /**
  * Called when submitting the new Kitten Form
  * This method will pull data from the form
@@ -6,7 +11,31 @@ let kittens = []
  * then add that data to the kittens list.
  * Then reset the form
  */
+
 function addKitten(event) {
+  event.preventDefault()
+  let form = event.target
+  
+  let kitten = {
+    id: generateId(),
+    name: form.Kitten.catnip
+    // mood: 
+    // catnips:
+    // pets: 
+  }
+
+  let kittenName = form.kittenName.value
+  
+  currentKitten = kittens.find(kit => kit.name == kittenName)
+
+  if (!currentKitten) {
+    currentKitten = { name: kittenName, mood: 0 }
+    kittens.push(currentKitten)
+    saveKittens()
+  }
+  console.log(currentKitten)
+  form.reset()
+
 }
 
 /**
@@ -14,6 +43,7 @@ function addKitten(event) {
  * Saves the string to localstorage at the key kittens 
  */
 function saveKittens() {
+  window.localStorage.setItem("kittens", JSON.stringify(kittens))
 }
 
 /**
@@ -22,7 +52,12 @@ function saveKittens() {
  * the kittens array to the retrieved array
  */
 function loadKittens() {
+  let kittensData = JSON.parse(window.localStorage.getItem("kittens"))
+  if (kittensData) {
+    kittens = kittensData
+  }
 }
+
 
 /**
  * Draw all of the kittens to the kittens element
@@ -71,7 +106,7 @@ function setKittenMood(kitten) {
  * Removes all of the kittens from the array
  * remember to save this change
  */
-function clearKittens(){
+function clearKittens() {
 }
 
 /**
@@ -88,7 +123,7 @@ function getStarted() {
 
 /**
  * Defines the Properties of a Kitten
- * @typedef {{id:sting, name: string, mood: string, affection: number}} Kitten
+ * @typedef {{id:string, name: string, mood: string, affection: number}} Kitten
  */
 
 

@@ -7,7 +7,7 @@
 ## Goals
 In this application you will build out a fun application that allows users the joys of owning a cat. This app is intended to ensure you as a student have learned the fundamental concepts around web development successfully graduating you out of the beginners bracket.
 
-Students that successfully build this application and meet all of the requirements will recieve a `$500 discount` from their tuition when they join the CodeWorks Immersive Fullstack course. 
+Students that successfully build this application and meet all of the requirements will receive a `$500 discount` from their tuition when they join the CodeWorks Immersive Fullstack course. 
 
 ## The Setup
 The basic design and layout for this app has been mocked out and the names of the JavaScript functions have all been created. As the developer you will need to work across HTML, CSS and JavaScript to complete the requirements. In the code you will see several comments intended to be used as help and guidelines on what needs to be accomplished. Once you have achieved the requirements of the app use GitHub to host the page live.
