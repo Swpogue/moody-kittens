@@ -7,7 +7,9 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Moody Kittens | CodeWorks</title>
   <link rel="shortcut icon" href="moody-logo.png" type="image/x-icon">
-  <link href="https://fonts.googleapis.com/css?family=Catamaran&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/6b1affbc75.js" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Teko:wght@300&display=swap" rel="stylesheet">
+  <link href="">
   <link rel="stylesheet" href="style.css">
 </head>
 
@@ -16,7 +18,7 @@
     <img src="moody-logo.png" height="60" alt="Moody Kittens">
     <form class="" onsubmit="addKitten(event)">
       <div class="d-flex">
-        <input placeholder="Name" type="text" name="kittenName" required/>
+        <input placeholder="Name" type="text" name="name" />
         <button class="btn-special" type="submit">
           /ᐠ｡ꞈ｡ᐟ\
         </button>
@@ -25,28 +27,30 @@
   </header>
   <main class="container">
     <div id="welcome" class="d-flex justify-content-center">
-      <div class="card p-2 text-center w-50">
+      <div class="card p-2 text-center w-60">
         <img src="moody-logo.png" height="250" alt="Moody Kittens">
         <div class="mt-2">
-          <b class="text-center">Hello Owner</b>
-          <p>Can you keep you kitten happy? Let's find out!</p>
+          <b class="text-center">Hello There</b>
+          <p>Can you keep your kitten happy? Add a name and find out!</p>
           <small>Good Luck and Have Fun!</small>
           <br>
           <button onclick="getStarted()">Get Started</button>
         </div>
       </div>
     </div>
-    <div class="p-2">
-      <div id="kittens" class="d-flex align-items-center flex-wrap">
-        <img src="" alt="kitten">
-        <img src="" alt="cat">
-      </div>
-     
+    <div id="kittens" class="d-flex align-items-center flex-wrap center">
+    </div>
+    <div id="deleted" class="d-flex align-items-center">
+    </div>
   </main>
-  <footer class="card bg-dark text-light p-2 d-flex align-items-center justify-content-center">
+  <div id="clear-kitten-container">
+    <i class="fa-solid fa-trash-can text-danger action" onclick="clearKittens()">
+      <span class="m-2,">Give to shelter!</span>
+    </i>
+  </div>
+  <footer class="card bg-dark text-light p-2 d-flex space-evenly">
     <small>Created with <span style="color: var(--primary)">&hearts;</span> by CodeWorks</small>
   </footer>
-
   <script src="app.js"></script>
 </body>
 
